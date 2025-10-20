@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate HTML, CSS, and JavaScript Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h1>Web Dev Project</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#todo">Todo List</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Contact Form Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contact Form</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Todo List Section -->
+        <section id="todo" class="section">
+            <div class="container">
+                <h2>Dynamic Todo List</h2>
+                <div class="todo-container">
+                    <div class="todo-input">
+                        <input type="text" id="todoInput" placeholder="Add a new task...">
+                        <button id="addTodoBtn" class="add-btn">Add Task</button>
+                    </div>
+                    <ul id="todoList" class="todo-list">
+                        <!-- Todo items will be added dynamically -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Image Gallery</h2>
+                <div class="gallery-container">
+                    <div class="gallery-input">
+                        <input type="url" id="imageUrlInput" placeholder="Enter image URL...">
+                        <input type="text" id="imageTitleInput" placeholder="Enter image title...">
+                        <button id="addImageBtn" class="add-btn">Add Image</button>
+                    </div>
+                    <div id="imageGallery" class="image-gallery">
+                        <!-- Images will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Web Development Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
